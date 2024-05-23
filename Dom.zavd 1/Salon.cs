@@ -26,7 +26,7 @@ public class Salon
     }
     public void RemoveCar()
     {
-        currentCar = null;
+        currentCar = null; // я так думаю що цього рядка не потрібно
         Console.WriteLine("Car removed successfully.");
     }
 }
