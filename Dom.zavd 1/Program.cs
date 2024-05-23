@@ -1,5 +1,3 @@
-﻿using ConsoleApp2;
-using Microsoft.VisualBasic;
 using System;
 
 Salon cars = new Salon();
