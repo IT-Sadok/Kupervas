@@ -1,6 +1,6 @@
 using System;
 
-salon cars = new salon();
+Salon cars = new Salon();
 Console.WriteLine("Choose the option");
 Console.WriteLine("1.Add car");
 Console.WriteLine("2.Remove car");
@@ -14,13 +14,13 @@ switch (choice)
         RemoveCar(cars);
     break;
 }
-static void AddCar(salon cars)
+static void AddCar(Salon cars)
 {
   Console.WriteLine("Введіть марку авто");
   string Brand = Console.ReadLine();
   cars.AddCar(Brand);
 }
-static void RemoveCar(salon cars)
+static void RemoveCar(Salon cars)
 {
  cars.RemoveCar();
 }
