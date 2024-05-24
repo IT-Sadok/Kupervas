@@ -1,11 +1,11 @@
 using System;
 
-Salon cars = new Salon();
+salon cars = new salon();
 Console.WriteLine("Choose the option");
 Console.WriteLine("1.Add car");
 Console.WriteLine("2.Remove car");
-string Choice = Console.ReadLine();
-switch (Choice) 
+string choice = Console.ReadLine();
+switch (choice) 
 {
     case "1":
        AddCar(cars);
@@ -14,13 +14,13 @@ switch (Choice)
         RemoveCar(cars);
     break;
 }
-static void AddCar(Salon cars)
+static void AddCar(salon cars)
 {
   Console.WriteLine("Введіть марку авто");
   string Brand = Console.ReadLine();
   cars.AddCar(Brand);
 }
-static void RemoveCar(Salon cars)
+static void RemoveCar(salon cars)
 {
  cars.RemoveCar();
 }
