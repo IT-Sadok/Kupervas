@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-public class salon
+public class Salon
 {
     private int carCount;
-    public salon()
+    public Salon()
     {
         carCount = 0;
     }
