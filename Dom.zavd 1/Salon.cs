@@ -3,30 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-class Car
+public class salon
 {
-    private string Brand { get; set; }
-    public Car(string Brand)
+    private int carCount;
+    public salon()
     {
-        Brand = Brand;
+        carCount = 0;
     }
-    public override string ToString()
-    {
-        return $"Brand: {Brand}";
-    }
-}
-public class Salon
-{
-    private Car currentCar;
     public void AddCar(string Brand)
     {
-        currentCar = new Car(Brand);
-        Console.WriteLine("Car added successfully");
+        carCount++;
+        Console.WriteLine("Car added successfully: " + carCount );
 
     }
     public void RemoveCar()
     {
-        currentCar = null; // я так думаю що цього рядка не потрібно
-        Console.WriteLine("Car removed successfully.");
+        if ( carCount > 0 )
+        {
+            carCount--;
+            Console.WriteLine("Car removed successfully" + carCount);
+        }
+        else
+        {
+            Console.WriteLine("No car to remove");
+        }
     }
 }
