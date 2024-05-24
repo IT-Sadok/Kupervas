@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 class Car
 {
     private string Brand { get; set; }
-    public Car(string _Brand)
+    public Car(string Brand)
     {
-        Brand = _Brand;
+        Brand = Brand;
     }
     public override string ToString()
     {
