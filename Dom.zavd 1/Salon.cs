@@ -21,7 +21,7 @@ public class Salon
         if ( carCount > 0 )
         {
             carCount--;
-            Console.WriteLine("Car removed successfully" + carCount);
+            Console.WriteLine("Car removed successfully: " + carCount);
         }
         else
         {
