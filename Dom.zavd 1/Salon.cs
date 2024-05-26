@@ -16,7 +16,7 @@ public class Salon
         if ( carCount > 0 )
         {
             carCount--;
-            Console.WriteLine("Car removed successfully: " +carCout ) // But is it good here according to S principle?
+            Console.WriteLine("Car removed successfully: " + carCount ) // But is it good here according to S principle?
         }
         else
         {
