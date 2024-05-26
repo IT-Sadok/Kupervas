@@ -1,5 +1,5 @@
 using System;
-salon cars = new salon();
+Salon salon = new Salon();
 while (true)
 {
     Console.WriteLine("Choose the option");
@@ -7,26 +7,22 @@ while (true)
     Console.WriteLine("2.Remove car");
     string choice = Console.ReadLine();
     switch (choice)
-    {
+{
         case "1":
-            AddCar(cars);
+            AddCar(salon);
             break;
         case "2":
-            RemoveCar(cars);
+            RemoveCar(salon);
             break;
     }
-    static void AddCar(salon cars)
-    {
-        Console.WriteLine("Введіть марку авто");
-        string Brand = Console.ReadLine();
-        cars.AddCar(Brand);
-    }
-    static void RemoveCar(salon cars)
-    {
-        cars.RemoveCar();
-    }
 }
-
-
-
-
+static void AddCar(Salon salon) 
+{
+    Console.WriteLine("Введіть марку авто");
+    string Brand = Console.ReadLine();
+    salon.AddCar(Brand);
+}
+static void RemoveCar(Salon salon) 
+{
+    salon.RemoveCar();
+}
