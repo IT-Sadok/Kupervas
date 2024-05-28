@@ -21,8 +21,10 @@ static void AddCar(Salon salon)
     Console.WriteLine("Введіть марку авто");
     string Brand = Console.ReadLine();
     salon.AddCar(Brand);
+    Console.WriteLine($"Car added successfully: {salon.carCount}");
 }
 static void RemoveCar(Salon salon) 
 {
     salon.RemoveCar();
+    Console.WriteLine($"Car removed successfully: {salon.carCount}");
 }
