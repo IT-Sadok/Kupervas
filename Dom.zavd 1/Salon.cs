@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 public class Salon
 {
-    public int carCount = 0;
+    public int carCount{ get; private set; } 
     public void AddCar(string Brand)
     {
         carCount++;
@@ -16,7 +16,6 @@ public class Salon
         if ( carCount > 0 )
         {
             carCount--;
-            Console.WriteLine("Car removed successfully: " + carCount ) // But is it good here according to S principle?
         }
         else
         {
