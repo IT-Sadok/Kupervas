@@ -13,13 +13,6 @@ public class Salon
     }
     public void RemoveCar()
     {
-        if ( carCount > 0 )
-        {
-            carCount--;
-        }
-        else
-        {
-            Console.WriteLine("No car to remove");
-        }
+        carCount--;
     }
 }
