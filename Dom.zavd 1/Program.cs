@@ -26,5 +26,12 @@ static void AddCar(Salon salon)
 static void RemoveCar(Salon salon) 
 {
     salon.RemoveCar();
-    Console.WriteLine($"Car removed successfully: {salon.carCount}");
+    if(salon.carCount > 0)
+    {
+        Console.WriteLine($"Car removed successfully: {salon.carCount}");
+    }
+    else
+    {
+        Console.WriteLine("No car to remove");
+    }
 }
