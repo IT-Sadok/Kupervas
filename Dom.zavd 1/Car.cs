@@ -1,4 +1,5 @@
-﻿using System;
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,13 +10,17 @@ namespace ConsoleApp2
     public class Car
     {
         private string Brand { get; set; }
-        public Car(string Brand)
+        private string Model { get; set; }
+        private int Year { get; set; }
+        public Car(string Brand,string Model, int Year)
         {
-            Brand = Brand;
+            this.Brand = Brand;
+            this.Model = Model;
+            this.Year = Year;
         }
         public override string ToString()
         {
-            return Brand;
+            return $"{Brand} {Model} {Year}" ;
         }
     }
 }
