@@ -1,6 +1,5 @@
 using ConsoleApp2;
-using System;
-using System.Security.Cryptography.X509Certificates;
+
 Salon salon = new Salon();
 while (true)
 {
@@ -31,14 +30,14 @@ static void AddCar(Salon salon)
     Console.WriteLine("Введіть рік випуску авто");
     int Year = int.Parse(Console.ReadLine());
     salon.AddCar(Brand, Model,Year);
-    Console.WriteLine($"Car added successfully: {salon.carCount}");
+    Console.WriteLine($"Car added successfully: {salon.CarCount}");
 }
 static void RemoveCar(Salon salon)
 {
     salon.RemoveCar();
-    if (salon.carCount > 0)
+    if (salon.CarCount > 0)
     {
-        Console.WriteLine($"Car removed successfully: {salon.carCount}");
+        Console.WriteLine($"Car removed successfully: {salon.CarCount}");
     }
     else
     {
