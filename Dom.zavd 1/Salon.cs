@@ -9,19 +9,14 @@ using System.Threading.Tasks;
 public class Salon
 {
     public List<Car> cars = new List<Car>();
-    public int CarCount { get; private set; }
+    public int CarCount => cars.Count;
     public void AddCar(string Brand, string Model, int Year)
     {
         cars.Add(item: new Car(Brand, Model, Year));
-        CarCount++;
     }
     public void RemoveCar()
     {
         cars.RemoveAt(cars.Count - 1);
-        CarCount--;
     }
-    public List<Car> GetAllCars() 
-    {
-        return new List<Car>(cars);
-    }
+    public List<Car> Cars { get; private set; }
 }
