@@ -29,7 +29,7 @@ static void AddCar(Salon salon)
     string Model = Console.ReadLine();
     Console.WriteLine("Введіть рік випуску авто");
     int Year = int.Parse(Console.ReadLine());
-    salon.AddCar(Brand, Model,Year);
+    salon.AddCar(Brand, Model, Year);
     Console.WriteLine($"Car added successfully: {salon.CarCount}");
 }
 static void RemoveCar(Salon salon)
@@ -46,13 +46,12 @@ static void RemoveCar(Salon salon)
 }
 static void ShowAllCars(Salon salon)
 {
-    List <Car> cars = salon.GetAllCars();
-    Console.WriteLine("Car list: ");
+    List<Car> cars = salon.Cars;
     if (cars.Count > 0)
     {
-        foreach(Car car in cars)
+        foreach (Car car in cars)
         {
-            Console.WriteLine(car);
+            Console.WriteLine($"Car list: {cars}");
         }
 
     }
