@@ -47,13 +47,9 @@ static void RemoveCar(Salon salon)
 static void ShowAllCars(Salon salon)
 {
     List<Car> cars = salon.Cars;
-    if (cars.Count > 0)
+    if (salon.CarCount > 0)
     {
-        foreach (Car car in cars)
-        {
-            Console.WriteLine($"Car list: {cars}");
-        }
-
+        Console.WriteLine($"Car list: {cars}");
     }
     else
     {
