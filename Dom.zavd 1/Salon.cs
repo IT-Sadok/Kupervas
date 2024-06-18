@@ -1,4 +1,3 @@
-
 using ConsoleApp2;
 using System;
 using System.Collections.Generic;
@@ -16,7 +15,7 @@ public class Salon
     }
     public void RemoveCar()
     {
-        cars.RemoveAt(cars.Count - 1);
+        cars.RemoveAt(cars.Count);
     }
     public List<Car> Cars { get; private set; }
 }
