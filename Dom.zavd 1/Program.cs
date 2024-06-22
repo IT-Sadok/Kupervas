@@ -49,7 +49,8 @@ static void ShowAllCars(Salon salon)
     List<Car> cars = salon.Cars;
     if (salon.CarCount > 0)
     {
-        Console.WriteLine($"Car list: {cars}");
+        string CarList = Salon.Join(",", cars);
+        Console.WriteLine($"Car list: {cars}" );
     }
     else
     {
