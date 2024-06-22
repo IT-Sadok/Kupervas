@@ -17,5 +17,8 @@ public class Salon
     {
         cars.RemoveAt(cars.Count);
     }
-    public List<Car> Cars { get; private set; }
+     public static string Join(",", List<Car> cars)
+ {
+     return string.Join(",", cars.Select(car => car.ToString()));
+ }
 }
