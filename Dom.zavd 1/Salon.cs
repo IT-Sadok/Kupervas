@@ -17,5 +17,5 @@ public class Salon
     {
         cars.RemoveAt(cars.Count);
     }
-    public List<Car> Cars { get; private set; }
+    public List<Car> Cars => cars;
 }
