@@ -23,11 +23,11 @@ while (true)
 }
 static void AddCar(Salon salon)
 {
-    Console.WriteLine("Введіть марку авто");
+    Console.Write("Введіть марку авто: ");
     string Brand = Console.ReadLine();
-    Console.WriteLine("Введіть модель авто");
+    Console.Write("Введіть модель авто: ");
     string Model = Console.ReadLine();
-    Console.WriteLine("Введіть рік випуску авто");
+    Console.Write("Введіть рік випуску авто: ");
     int Year = int.Parse(Console.ReadLine());
     salon.AddCar(Brand, Model, Year);
     Console.WriteLine($"Car added successfully: {salon.CarCount}");
@@ -49,7 +49,8 @@ static void ShowAllCars(Salon salon)
     List<Car> cars = salon.Cars;
     if (salon.CarCount > 0)
     {
-        Console.WriteLine($"Car list: {cars}");
+        string carList = string.Join("," , cars.Select(car => car.ToString()))
+        Console.WriteLine($"Car list: {carList}");
     }
     else
     {
