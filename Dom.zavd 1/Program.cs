@@ -1,4 +1,6 @@
 using ConsoleApp2;
+using System.Threading.Tasks.Dataflow;
+using System.IO;
 
 Salon salon = new Salon();
 while (true)
@@ -22,13 +24,20 @@ while (true)
     }
 }
 static void AddCar(Salon salon)
-{
+{   
     Console.Write("Введіть марку авто: ");
     string Brand = Console.ReadLine();
     Console.Write("Введіть модель авто: ");
     string Model = Console.ReadLine();
     Console.Write("Введіть рік випуску авто: ");
     int Year = int.Parse(Console.ReadLine());
+    string path = "text_document.txt";
+    using (StreamWriter writer = new StreamWriter(path, append: true))
+    {
+        writer.WriteAsync($"Марка: {Brand}");
+        writer.WriteAsync($"Модель: {Model}");
+        writer.WriteAsync($"Рік випуску: {Year}");
+    }
     salon.AddCar(Brand, Model, Year);
     Console.WriteLine($"Car added successfully: {salon.CarCount}");
 }
@@ -49,8 +58,8 @@ static void ShowAllCars(Salon salon)
     List<Car> cars = salon.Cars;
     if (salon.CarCount > 0)
     {
-        string carList = string.Join("," , cars.Select(car => car.ToString()))
-        Console.WriteLine($"Car list: {carList}");
+        string carList = string.Join(", ",cars.Select(car => car.ToString()));
+        Console.WriteLine($"Car list: {carList}" );
     }
     else
     {
